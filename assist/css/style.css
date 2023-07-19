@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #222;
   font-family: 'Nunito Sans', sans-serif;
@@ -43,10 +47,32 @@ body {
 header {
   position: absolute;
   width: 100%;
-  /* position: fixed; */
   top: 20px;
   z-index: 9999;
 }
+
+/* -----Nav Sticky Start----- */
+.nav-sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: #333;
+  top: -80px;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+
+/* -----Nav Sticky End----- */
 
 header>nav {
   height: 80px;
@@ -169,11 +195,13 @@ nav>ul>li>a {
 .portfolio-col-6 {
   flex-basis: 32%;
 }
+
 .portfolio-col-1,
 .portfolio-col-2,
-.portfolio-col-3{
+.portfolio-col-3 {
   margin-bottom: 40px;
 }
+
 .img-text>img {
   width: 100%;
   height: 350px;
@@ -269,9 +297,11 @@ nav>ul>li>a {
 .about-right {
   flex-basis: 40%;
 }
-.about-left>.img-heading{
+
+.about-left>.img-heading {
   display: none;
 }
+
 .about-left>.about-img>img {
   width: 100%;
   object-fit: cover;
@@ -319,8 +349,9 @@ nav>ul>li>a {
 
 
 .about-right>.download-cv {
-display: inline-block;
+  display: inline-block;
 }
+
 .about-right>.download-cv>a {
   color: white;
   font-size: 12px;
