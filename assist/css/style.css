@@ -56,7 +56,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background-color: #333;
+  background-color: #fff;
   top: -80px;
   animation: slideIn 0.5s ease-out forwards;
 }
@@ -70,7 +70,9 @@ header {
     transform: translateY(100%);
   }
 }
-
+.nav-sticky>nav>ul>li>a {
+  color: black;
+}
 
 /* -----Nav Sticky End----- */
 
@@ -99,12 +101,13 @@ nav>ul>li>a {
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.3s;
+  transition: all 0.5s;
 
   /* &:hover {
     color: red;
   } */
 }
+
 
 /* ===========================
     This is Hero Section
